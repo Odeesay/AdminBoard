@@ -50,3 +50,5 @@ $('#nav__button__transactions').click(function(){
     $('#nav__button__transactions').addClass('nav__button__active');
     $('#transactions__icon').css('backgroundImage', 'url(images/transIco__white.png)')
 });
+
+// asd
