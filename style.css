@@ -100,7 +100,7 @@ body::-webkit-scrollbar { width: 0; }
 }
 
 .wallet__icon {
-    background-image: url(images/walletIco.png);
+    background-image: url(images/wallIco.png);
 }
 
 .payment__icon {

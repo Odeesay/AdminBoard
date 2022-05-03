@@ -2,7 +2,7 @@ function inActiveButtonClear(){
     $('#nav__button__home').removeClass('nav__button__active');
     $('#home__icon').css('backgroundImage', 'url(images/homeIco.png)')
     $('#nav__button__wallet').removeClass('nav__button__active');
-    $('#wallet__icon').css('backgroundImage', 'url(images/walletIco.png)')
+    $('#wallet__icon').css('backgroundImage', 'url(images/wallIco.png)')
     $('#nav__button__payment').removeClass('nav__button__active');
     $('#payment__icon').css('backgroundImage', 'url(images/cardIco.png)')
     $('#nav__button__invoice').removeClass('nav__button__active');
@@ -24,7 +24,7 @@ $('#nav__button__home').click(function(){
 $('#nav__button__wallet').click(function(){
     inActiveButtonClear();
     $('#nav__button__wallet').addClass('nav__button__active');
-    $('#wallet__icon').css('backgroundImage', 'url(images/walletIco__white.png)')
+    $('#wallet__icon').css('backgroundImage', 'url(images/wallIco__white.png)')
 });
 
 $('#nav__button__payment').click(function(){
