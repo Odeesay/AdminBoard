@@ -1,4 +1,5 @@
-function inActiveButtonClear(){
+
+function inActiveMenuButtonClear(){
     $('#nav__button__home').removeClass('nav__button__active');
     $('#home__icon').css('backgroundImage', 'url(images/homeIco.png)')
     $('#nav__button__wallet').removeClass('nav__button__active');
@@ -13,42 +14,66 @@ function inActiveButtonClear(){
     $('#transactions__icon').css('backgroundImage', 'url(images/transIco.png)')
 }
 
+function inActiveNavButtonClear(){
+    $('#history__nav__button__1').removeClass('history__nav__button__active');
+    $('#history__nav__button__2').removeClass('history__nav__button__active');
+    $('#history__nav__button__3').removeClass('history__nav__button__active');
+}
 
 
 $('#nav__button__home').click(function(){
-    inActiveButtonClear();
+    inActiveMenuButtonClear();
     $('#nav__button__home').addClass('nav__button__active');
-    $('#home__icon').css('backgroundImage', 'url(images/homeIco__white.png)')
+    $('#home__icon').css('backgroundImage', 'url(images/homeIco__white.png)');
 });
 
 $('#nav__button__wallet').click(function(){
-    inActiveButtonClear();
+    inActiveMenuButtonClear();
     $('#nav__button__wallet').addClass('nav__button__active');
-    $('#wallet__icon').css('backgroundImage', 'url(images/wallIco__white.png)')
+    $('#wallet__icon').css('backgroundImage', 'url(images/wallIco__white.png)');
 });
 
 $('#nav__button__payment').click(function(){
-    inActiveButtonClear();
+    inActiveMenuButtonClear();
     $('#nav__button__payment').addClass('nav__button__active');
-    $('#payment__icon').css('backgroundImage', 'url(images/cardIco__white.png)')
+    $('#payment__icon').css('backgroundImage', 'url(images/cardIco__white.png)');
 });
 
 $('#nav__button__invoice').click(function(){
-    inActiveButtonClear();
+    inActiveMenuButtonClear();
     $('#nav__button__invoice').addClass('nav__button__active');
-    $('#invoice__icon').css('backgroundImage', 'url(images/invoiceIco__white.png)')
+    $('#invoice__icon').css('backgroundImage', 'url(images/invoiceIco__white.png)');
 });
 
 $('#nav__button__setting').click(function(){
-    inActiveButtonClear();
+    inActiveMenuButtonClear();
     $('#nav__button__setting').addClass('nav__button__active');
-    $('#setting__icon').css('backgroundImage', 'url(images/settingIco__white.png)')
+    $('#setting__icon').css('backgroundImage', 'url(images/settingIco__white.png)');
 });
 
 $('#nav__button__transactions').click(function(){
-    inActiveButtonClear();
+    inActiveMenuButtonClear();
     $('#nav__button__transactions').addClass('nav__button__active');
-    $('#transactions__icon').css('backgroundImage', 'url(images/transIco__white.png)')
+    $('#transactions__icon').css('backgroundImage', 'url(images/transIco__white.png)');
 });
 
-// asd
+// ==================================
+
+$('#history__nav__button__1').click(function(){
+    inActiveNavButtonClear();
+    navCounter = 1;
+    $('#history__nav__button__1').addClass('history__nav__button__active');
+});
+
+$('#history__nav__button__2').click(function(){
+    inActiveNavButtonClear();
+    navCounter = 2;
+    $('#history__nav__button__2').addClass('history__nav__button__active');
+});
+
+$('#history__nav__button__3').click(function(){
+    inActiveNavButtonClear();
+    navCounter = 3;
+    $('#history__nav__button__3').addClass('history__nav__button__active');
+});
+
