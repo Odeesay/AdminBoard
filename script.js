@@ -61,19 +61,16 @@ $('#nav__button__transactions').click(function(){
 
 $('#history__nav__button__1').click(function(){
     inActiveNavButtonClear();
-    navCounter = 1;
     $('#history__nav__button__1').addClass('history__nav__button__active');
 });
 
 $('#history__nav__button__2').click(function(){
     inActiveNavButtonClear();
-    navCounter = 2;
     $('#history__nav__button__2').addClass('history__nav__button__active');
 });
 
 $('#history__nav__button__3').click(function(){
     inActiveNavButtonClear();
-    navCounter = 3;
     $('#history__nav__button__3').addClass('history__nav__button__active');
 });
 
