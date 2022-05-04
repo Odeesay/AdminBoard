@@ -145,7 +145,7 @@ body::-webkit-scrollbar { width: 0; }
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 340px;
+    margin-left: 345px;
 }
 
 .mainContainer__header {
@@ -788,7 +788,7 @@ body::-webkit-scrollbar { width: 0; }
 }
 
 .balance__container__card {
-    width: 365px;
+    width: 355px;
     height: 385px;
     background-color: #fff;
     border-radius: 20px;
