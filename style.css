@@ -21,7 +21,7 @@ body::-webkit-scrollbar { width: 0; }
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    /* position: fixed; */
+    position: fixed;
 }
 
 .menu__logo__container {
@@ -145,6 +145,7 @@ body::-webkit-scrollbar { width: 0; }
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-left: 340px;
 }
 
 .mainContainer__header {
