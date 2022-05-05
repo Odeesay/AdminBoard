@@ -307,7 +307,7 @@ body::-webkit-scrollbar { width: 0; }
 .mainContainer__reports {
     width: 1135px;
     height: 120px;
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
 }
