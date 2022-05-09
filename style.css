@@ -7,12 +7,11 @@
 
 .screen {
     width: 100%;
-    height: 240vh;
+    height: 200vh;
     display: flex;
     background-color: #f2f2f2;
+    overflow-x: hidden;
 }
-
-body::-webkit-scrollbar { width: 0; }
 
 .menu {
     width: 345px;
@@ -21,7 +20,7 @@ body::-webkit-scrollbar { width: 0; }
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    /* position: fixed; */
+    position: fixed;
 }
 
 .menu__logo__container {
@@ -141,10 +140,12 @@ body::-webkit-scrollbar { width: 0; }
 
 .mainContainer {
     width: 1200px;
-    height: 100%;
+    height: 200vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-left: 345px;
+    background-color: #f2f2f2;
 }
 
 .mainContainer__header {
@@ -547,7 +548,49 @@ body::-webkit-scrollbar { width: 0; }
     background-color: #fff;
     margin-left: 32px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
   }
+
+ .statistics__text {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+ }
+
+ .barChart__container {
+     width: 100%;
+     height: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-top: 60px;
+ }
+
+ .legend__container {
+     width: 100%;
+     height: 20px;
+     margin-top: 5px;
+     display: flex;
+     align-items: center;
+ }
+
+ .fl {
+     margin-top: 20px;
+ }
+
+ .legend__color {
+     width: 50px;
+     height: 100%;
+ }
+
+ .legend__text {
+     font-size: 14px;
+     font-family: 'DM Sans', sans-serif;
+     color: #72757A;
+     margin-left: 10px;
+ }
 
   .transactions__header {
       width: 100%;
@@ -942,9 +985,42 @@ body::-webkit-scrollbar { width: 0; }
   
 .transactions__graph {
     width: 100%;
-    height: 25%;
+    height: 30%;
     background-color: #fff;
     border-radius: 20px;
+    padding-left: 30px;
+    display: flex;
+}
+
+.transactions__graph__text__container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.transactions__graph__header {
+    font-family: 'DM Sans', sans-serif;
+    color: #72757A;
+    font-size: 14px;
+}
+
+.transactions__graph__amount {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.transactions__graph__dataset {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .balance__details__container {
@@ -1020,6 +1096,37 @@ body::-webkit-scrollbar { width: 0; }
 
 .balance__info__item__active p {
     color: #fff;
+}
+
+.dataset__container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.dataset__text__container {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.dataset__text__header {
+    font-size: 14px;
+    color: #72757A;
+}
+
+.dataset__text__amount {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.graph__container {
+    width: 280px;
+    /* height: 150px; */
 }
 
 

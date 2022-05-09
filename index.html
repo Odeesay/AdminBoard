@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <link rel="icon" href="images/logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Pelio Crypto</title>
 </head>
 <body>
@@ -48,7 +49,7 @@
             <div class="menu__footText" id="menu__footText">
                 <p>Payment Admin Dashboard</p>
                 <p class="gr">© 2010-2021 All rights reserved.</p>
-                <p class="gr">Made by ❤️  Md Shamim Hossain</p>
+                <p class="gr">Made by ❤️  Odeesay⚔</p>
             </div>
         </div>
         <div class="mainContainer" id="mainContainer">
@@ -260,7 +261,26 @@
                     </div>
                 </div>
                 <div class="mainContainer__statistics" id="mainContainer__statistics">
-
+                    <p class="statistics__text">Statistics</p>
+                    <div class="barChart__container">
+                        <canvas id="myChartBar"></canvas>
+                    </div>
+                    <div class="legend__container fl">
+                        <div class="legend__color" id="legend__color1"></div>
+                        <p class="legend__text" id="legend__text1"></p>
+                    </div>
+                    <div class="legend__container">
+                        <div class="legend__color" id="legend__color2"></div>
+                        <p class="legend__text" id="legend__text2"></p>
+                    </div>
+                    <div class="legend__container">
+                        <div class="legend__color" id="legend__color3"></div>
+                        <p class="legend__text" id="legend__text3"></p>
+                    </div>
+                    <div class="legend__container">
+                        <div class="legend__color" id="legend__color4"></div>
+                        <p class="legend__text" id="legend__text4"></p>
+                    </div>
                 </div>
             </div>
             <div class="balance__container" id="balance__container">
@@ -310,7 +330,13 @@
                     
                     
                     <div class="transactions__graph" id="transactions__graph">
-                        
+                        <div class="transactions__graph__text__container">
+                            <p class="transactions__graph__header">Transactions</p>
+                            <p class="transactions__graph__amount" id="transactions__graph__amount">5,793</p>
+                        </div>
+                        <div class="transactions__graph__dataset">
+                            <canvas id="myChartLine"></canvas>
+                        </div>
                     </div>
                 </div>
                 <div class="balance__container__card balance__details__container">
@@ -342,7 +368,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="balance__container__card">
+                <div class="balance__container__card dataset__container">
+                    <div class="dataset__text__container">
+                        <p class="dataset__text__header">Activity</p>
+                        <p class="dataset__text__amount">$ 48,284</p>
+                    </div>
+                    <div class="graph__container">
+                        <canvas id="myChart"></canvas>
+                    </div>
                     
                 </div>
             </div>

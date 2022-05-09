@@ -116,5 +116,120 @@ function startRotate(event) {
     
 } 
 
+// =========================  Donut chart
+
+
+
+const data = {
+    labels: [
+      'Sun',
+      'Mon',
+      'Tue'
+    ],
+    datasets: [{
+      label: 'Activity',
+      data: [287, 312, 176],
+      backgroundColor: [
+        '#00D171',
+        '#FF684D',
+        '#01BEFF'
+      ],
+      hoverOffset: 4
+    }]
+  };
+
+  const config = {
+    type: 'doughnut',
+    data: data,
+  };
+
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+
+
+
+//   ============================ Line chart
+
+const labelsLine = [1,2,3,4];
+const dataLine = {
+  labels: labelsLine,
+  datasets: [{
+    data: [65, 63, 70, 87],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+
+
+const configLine = {
+    type: 'line',
+    data: dataLine,
+    options: {
+        plugins: {
+          legend: {
+                display: false
+          }
+        }
+      }
+  };
+
+  const myChartLine = new Chart(
+    document.getElementById('myChartLine'),
+    configLine
+  ); 
+
+//   ============================== Bar chart
+
+const labels = ['Sun','Mon','Tue','Wed'];
+const dataBar = {
+  labels: labels,
+  datasets: [{
+    data: [65, 123, 146, 81, 56, 55, 40],
+    label: 'Week Statistics',
+    backgroundColor: [
+        '#00D171',
+        '#FF684D',
+        '#0E6EFF',
+        '#FFBF26'
+    ],
+    borderWidth: 1
+  }]
+};
+
+$('#legend__color1').css('backgroundColor', dataBar.datasets[0].backgroundColor[0]);
+$('#legend__color2').css('backgroundColor', dataBar.datasets[0].backgroundColor[1]);
+$('#legend__color3').css('backgroundColor', dataBar.datasets[0].backgroundColor[2]);
+$('#legend__color4').css('backgroundColor', dataBar.datasets[0].backgroundColor[3]);
+
+$('#legend__text1').text(dataBar.labels[0]+'day');
+$('#legend__text2').text(dataBar.labels[1]+'day');
+$('#legend__text3').text(dataBar.labels[2]+'sday');
+$('#legend__text4').text(dataBar.labels[3]+'nesday');
+
+const configBar = {
+    type: 'bar',
+    data: dataBar,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+              display: false
+        }
+      }
+    }
+  };
+
+  const myChartBar = new Chart(
+    document.getElementById('myChartBar'),
+    configBar
+  ); 
 
 
