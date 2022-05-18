@@ -47,7 +47,7 @@
 .auth__form input {
     width: 350px;
     height: 60px;
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 10px;
     outline: none;
     border: none;
@@ -61,14 +61,15 @@
 .auth__form p {
     font-size: 18px;
     color: #999;
-
 }
 
 .auth__login__placeholder {
     position: relative;
-    bottom: 122px;
+    bottom: 110px;
     left: 20px;
     z-index: 1;
+    transition: 1s;
+
 }
 
 .auth__password__placeholder {
@@ -78,6 +79,46 @@
     z-index: 1;
 }   
 
+.form__button {
+    width: 350px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    transition: .3s;
+    background-color: #0E6EFF;
+}
+
+.form__button:hover {
+    background-color: #0c65eb;
+}
+
+.regText__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.signUp__text__container {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+#signUp__link {
+    color: #0E6EFF;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#signUp__link:hover {
+    text-decoration: underline;
+}
 
 .screen__dashboard {
     width: 100%;
