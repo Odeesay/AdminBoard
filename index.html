@@ -19,10 +19,8 @@
             <div class="auth__container" id="auth__container">
                 <p class="auth__head" id="auth__head">Authorization</p>
                 <div class="auth__form" id="auth__form">
-                    <input type="text" class="auth__login" id="auth__login">
-                    <input type="password" class="auth__password" id="auth__password">
-                    <label for="" class="auth__login__placeholder" id="auth__login__placeholder">Login</label>
-                    <p class="auth__password__placeholder" id="auth__password__placeholder">Password</p>
+                    <input type="text" class="auth__login" id="auth__login" placeholder="Login">
+                    <input type="password" class="auth__password" id="auth__password" placeholder="Password">
                     <button class="auth__button form__button" id="auth__button">Sing In</button>
                     <div class="regText__container" id="regText__container">
                         <p>Dont have an account?</p>
@@ -31,6 +29,25 @@
                             <p>& explore</p>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="reg__container" id="reg__container">
+                <p class="reg__head" id="reg__head">Registration</p>
+                <div class="reg__form" id="reg__form">
+                    <div class="reg__form__inputs__container" id="reg__form__inputs__container">
+                        <div class="reg__form__left" id="reg__form__left">
+                            <input type="text" placeholder="First Name">
+                            <input type="text" placeholder="Login">
+                            <input type="text" placeholder="Date of Birth" onfocus="(this.type='date')">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <div class="reg__form__right" id="reg__form__right">
+                            <input type="text" placeholder="Last Name">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Confirm your password" id="passwordConfirm">
+                        </div>
+                    </div>
+                    <button class="reg__button form__button" id="reg__button">Sign Up</button>
                 </div>
             </div>
         </div>

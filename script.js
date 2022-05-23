@@ -234,11 +234,10 @@ const configBar = {
 
 // =====================,
 
-// place.style.top = 0;
-//     place.style.fontSize = '10px';
-
-$('#auth__login').click(function(){
-      $('#auth__login__placeholder').css('bottom', '120px');
-      $('#auth__login__placeholder').css('fontSize', '10px');
-})
-
+$('#signUp__link').click(function(){
+  $('#auth__container').slideUp();
+  $('#form__container').css('width', '850px');
+  $('#form__container').css('height', '550px');
+  $('#reg__container').slideToggle();
+  $('#reg__container').css('display', 'flex');
+});
