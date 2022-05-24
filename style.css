@@ -9,10 +9,19 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
     background-color: #f2f2f2;
     font-family: 'DM Sans', sans-serif;
+}
+
+.screen__regAuth__header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .form__container {
@@ -64,6 +73,15 @@
     color: #999;
 }
 
+.al, .signIn__text__container {
+    font-size: 18px;
+    color: #999;
+}
+
+.al {
+    margin-top: 10px;
+}
+
 .form__button {
     width: 350px;
     height: 60px;
@@ -96,13 +114,17 @@
     justify-content: space-between;
 }
 
-#signUp__link {
+#signUp__link, #signIn__link {
     color: #0E6EFF;
     cursor: pointer;
     transition: .3s;
 }
 
 #signUp__link:hover {
+    text-decoration: underline;
+}
+
+#signIn__link:hover {
     text-decoration: underline;
 }
 
@@ -123,7 +145,6 @@
     align-items: center;
     justify-content: flex-start;
     margin-top: 20px;
-    background-color: red;
 }
 
 .reg__form__left, .reg__form__right {
@@ -142,6 +163,31 @@
     display: flex;
     width: 100%;
     height: 80%;
+}
+
+.reg__button {
+    margin-top: 20px;
+}
+
+.signIn__text__container {
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+}
+
+.screen__regAuth__alert {
+    width: 350px;
+    height: 250px;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    color: #fff;
+    font-size: 24px;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
     background-color: #000;
 }
 

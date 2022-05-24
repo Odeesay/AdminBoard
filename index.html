@@ -15,6 +15,15 @@
 </head>
 <body>
     <div class="screen__regAuth" id="screen__regAuth">
+        <div class="screen__regAuth__header" id="screen__regAuth__header">
+            <div class="screen__regAuth__alert" id="screen__regAuth__alert">
+                
+            </div>
+            <div class="menu__logo__container" id="menu__logo__container">
+                <div class="logo__container__photo" id="logo__container__photo"></div>
+                <h1 class="logo__container__text">PELIO</h1>
+            </div>
+        </div>
         <div class="form__container" id="form__container">
             <div class="auth__container" id="auth__container">
                 <p class="auth__head" id="auth__head">Authorization</p>
@@ -36,22 +45,27 @@
                 <div class="reg__form" id="reg__form">
                     <div class="reg__form__inputs__container" id="reg__form__inputs__container">
                         <div class="reg__form__left" id="reg__form__left">
-                            <input type="text" placeholder="First Name">
-                            <input type="text" placeholder="Login">
-                            <input type="text" placeholder="Date of Birth" onfocus="(this.type='date')">
-                            <input type="password" placeholder="Password">
+                            <input type="text" placeholder="First Name" id="reg__firstName">
+                            <input type="text" placeholder="Login" id="reg__login">
+                            <input type="text" placeholder="Date of Birth" onfocus="(this.type='date')" id="reg__birthDate">
+                            <input type="password" placeholder="Password" id="reg__password">
                         </div>
                         <div class="reg__form__right" id="reg__form__right">
-                            <input type="text" placeholder="Last Name">
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="Confirm your password" id="passwordConfirm">
+                            <input type="text" placeholder="Last Name" id="reg__lastName">
+                            <input type="email" placeholder="Email" id="reg__email">
+                            <input type="password" placeholder="Confirm your password" id="reg__confirmPassword">
                         </div>
                     </div>
                     <button class="reg__button form__button" id="reg__button">Sign Up</button>
                 </div>
+                <p class="al">Already have an account?</p>
+                <div class="signIn__text__container">
+                    <p class="signIn__link" id="signIn__link">Sign In</p>
+                    <p>& explore</p>
+                </div>
+            </div>
             </div>
         </div>
-    </div>
     <div class="screen__dashboard" id="screen__dashboard">
         <div class="menu" id="menu">
             <div class="menu__logo__container" id="menu__logo__container">

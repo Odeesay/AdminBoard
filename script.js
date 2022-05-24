@@ -1,5 +1,59 @@
 let clickFlip = 0;
 
+let userData = {
+  userLists: []
+};
+
+function signInAppear(){
+  $('#auth__container').slideUp();
+  $('#form__container').css('width', '850px');
+  $('#form__container').css('height', '550px');
+  $('#reg__container').slideToggle();
+  $('#reg__container').css('display', 'flex');
+
+  return 0;
+}
+
+function signUpAppear(){
+  $('#reg__container').slideUp();
+  $('#form__container').css('width', '450px');
+  $('#form__container').css('height', '500px');
+  $('#auth__container').slideToggle();
+  $('#reg__container').css('display', 'none');
+
+  return 0;
+}
+
+function regAuthAlertAppear(){
+  setTimeout(function(){
+    $('#screen__regAuth__alert').slideUp()
+  },3000)
+
+  return 0;
+}
+
+function emptyInputCheck(){
+  
+    $('#screen__regAuth__alert').slideDown();
+      $('#screen__regAuth__alert').css('backgroundColor', '#FFBF26');
+      $('#screen__regAuth__alert').css('display', 'flex');
+      $('#screen__regAuth__alert').text('Fill in all the inputs, please');
+      regAuthAlertAppear()
+  
+}
+
+function inputClear(){
+  $('#reg__firstName').val('')
+    $('#reg__lastName').val('')
+    $('#reg__login').val('')
+    $('#reg__email').val('')
+    $('#reg__birthDate').val('')
+    $('#reg__password').val('')
+    $('#reg__confirmPassword').val('')
+    $('#auth__login').val('')
+    $('#auth__password').val('')
+}
+
 function inActiveMenuButtonClear(){
     $('#nav__button__home').removeClass('nav__button__active');
     $('#home__icon').css('backgroundImage', 'url(images/homeIco.png)')
@@ -234,10 +288,103 @@ const configBar = {
 
 // =====================,
 
+
 $('#signUp__link').click(function(){
-  $('#auth__container').slideUp();
-  $('#form__container').css('width', '850px');
-  $('#form__container').css('height', '550px');
-  $('#reg__container').slideToggle();
-  $('#reg__container').css('display', 'flex');
+  signInAppear();
+  inputClear();
 });
+
+$('#signIn__link').click(function(){
+  signUpAppear()
+  inputClear();
+})
+
+
+// ============================== registratinon/auth
+
+
+
+console.log(Object.keys(userData));
+
+$('#reg__button').click(function(){
+  if(
+    $('#reg__firstName').val() === '' ||
+    $('#reg__lastName').val() === '' ||
+    $('#reg__login').val() === '' ||
+    $('#reg__email').val() === '' ||
+    $('#reg__birthDate').val() === '' ||
+    $('#reg__password').val() === '' ||
+    $('#reg__passwordConfirm').val()
+  ){
+    emptyInputCheck();
+  }else{
+    let user = {};
+    user.name = $('#reg__firstName').val();
+    user.lastName = $('#reg__lastName').val();
+    user.login = $('#reg__login').val();
+    user.email = $('#reg__email').val();
+    user.birthday = $('#reg__birthDate').val();
+    user.password = $('#reg__password').val();
+    user.AllVisits = [];
+
+    if($('#reg__password').val() === $('#reg__confirmPassword').val()){
+        user.password = $('#reg__password').val();
+        userData.userLists.push(user);
+        console.log(userData);
+        user.currentVisits = [];
+        user.countVisit = 0;
+        user.statistic = [1,5,3,6];
+        $('#screen__regAuth__alert').slideDown();
+        $('#screen__regAuth__alert').css('backgroundColor', '#03B664');
+        $('#screen__regAuth__alert').css('display', 'flex');
+        $('#screen__regAuth__alert').text('Successful registration')
+        regAuthAlertAppear();
+        inputClear();
+        signUpAppear()
+        
+
+    }else{
+        $('#screen__regAuth__alert').slideDown();
+        $('#screen__regAuth__alert').css('backgroundColor', '#FF684D');
+        $('#screen__regAuth__alert').css('display', 'flex');
+        $('#screen__regAuth__alert').text('Passwords do not match');
+        regAuthAlertAppear();
+        inputClear();
+    } 
+  }
+  
+})
+  
+
+
+$('#auth__button').click(function(){
+  let candidateConfirm = false;
+  let candidate = {
+      name: $('#auth__login').val(),
+      password: $('#auth__password').val()
+  }
+  console.log(candidate);
+
+  for(let i = 0; i<userData.userLists.length; i++){
+      if(userData.userLists[i].login == candidate.name && userData.userLists[i].password==candidate.password){
+          candidateConfirm = true;
+      }else{
+          candidateConfirm = false;
+      }
+  }
+  inputClear();
+  if(candidateConfirm){
+    $('#screen__regAuth').css('display', 'none');
+    // $('#screen__dashboard').slideToggle();
+    $('#screen__dashboard').css('display', 'flex');
+  }else{
+      $('#screen__regAuth__alert').slideDown();
+      $('#screen__regAuth__alert').css('backgroundColor', '#FF684D');
+      $('#screen__regAuth__alert').css('display', 'flex');
+      $('#screen__regAuth__alert').text('Login or password do not match to a registered user');
+      regAuthAlertAppear();
+      inputClear();
+  }
+})
+  
+
