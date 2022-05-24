@@ -1,7 +1,7 @@
 let clickFlip = 0;
-
+let userLists = JSON.parse(localStorage.getItem('User')) || [];
 let userData = {
-  userLists: []
+  userLists
 };
 
 function signInAppear(){
@@ -330,6 +330,7 @@ $('#reg__button').click(function(){
     if($('#reg__password').val() === $('#reg__confirmPassword').val()){
         user.password = $('#reg__password').val();
         userData.userLists.push(user);
+        localStorage.setItem('User', JSON.stringify(userLists));
         console.log(userData);
         user.currentVisits = [];
         user.countVisit = 0;
