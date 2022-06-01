@@ -170,6 +170,12 @@ function startRotate(event) {
     
 } 
 
+function setNameSurrEmail(name, lastName, email){
+  $('#userName').text(name);
+  $('#userLastName').text(lastName);
+  $('#userEmail').text(email);
+}
+
 // =========================  Donut chart
 
 
@@ -335,13 +341,16 @@ $('#reg__button').click(function(){
         user.currentVisits = [];
         user.countVisit = 0;
         user.statistic = [1,5,3,6];
+        setNameSurrEmail(user.name, user.lastName, user.email)
         $('#screen__regAuth__alert').slideDown();
         $('#screen__regAuth__alert').css('backgroundColor', '#03B664');
         $('#screen__regAuth__alert').css('display', 'flex');
         $('#screen__regAuth__alert').text('Successful registration')
         regAuthAlertAppear();
         inputClear();
-        signUpAppear()
+        signUpAppear();
+        
+        
         
 
     }else{
@@ -358,17 +367,22 @@ $('#reg__button').click(function(){
   
 
 
+
 $('#auth__button').click(function(){
+  let localData = JSON.parse(localStorage.getItem('userLists'));
+  console.log(localData)
   let candidateConfirm = false;
   let candidate = {
       name: $('#auth__login').val(),
       password: $('#auth__password').val()
   }
+  
   console.log(candidate);
 
   for(let i = 0; i<userData.userLists.length; i++){
       if(userData.userLists[i].login == candidate.name && userData.userLists[i].password==candidate.password){
           candidateConfirm = true;
+          setNameSurrEmail(userData.userLists[i].name, userData.userLists[i].lastName, userData.userLists[i].email)
       }else{
           candidateConfirm = false;
       }
@@ -378,6 +392,7 @@ $('#auth__button').click(function(){
     $('#screen__regAuth').css('display', 'none');
     // $('#screen__dashboard').slideToggle();
     $('#screen__dashboard').css('display', 'flex');
+    
   }else{
       $('#screen__regAuth__alert').slideDown();
       $('#screen__regAuth__alert').css('backgroundColor', '#FF684D');
@@ -387,5 +402,12 @@ $('#auth__button').click(function(){
       inputClear();
   }
 })
+
+
+
+// localStorage.setItem('data', JSON.stringify(data));
+        
+        
+
   
 
