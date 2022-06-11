@@ -1,2 +1,2 @@
-# AdminBoard
-Admin Dashboard
+# Crypto site admins's dashboard
+Siple admin dashboard
