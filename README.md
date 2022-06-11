@@ -1,2 +1,2 @@
 # Crypto site admins's dashboard
-Siple admin dashboard
+Simple admin dashboard
